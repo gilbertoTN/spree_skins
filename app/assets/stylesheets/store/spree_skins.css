@@ -1,4 +1,8 @@
 /*
   *= require 'store/bootstrap'
   *= require 'store/bootstrap-responsive'
+  *= require 'store/docs'
+  *= require 'store/prettify'
+  *= require 'store/flexslider'
+  *= require 'store/jquery.fancybox-1.3.4'
 */
