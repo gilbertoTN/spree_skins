@@ -1,0 +1,256 @@
+  <div class="navbar navbar-fixed-top" id="main-nav">
+    <div class="container">
+      <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <nav class="nav-collapse collapse" style="height:0px">
+        <ul class="nav">
+          <li class="active"><a href="index.html">Home</a>
+          </li>
+          <li><a href="myaccount.html">My Account </a>
+          </li>
+          <li><a href="shopping-cart.html">Shopping Cart</a>
+          </li>
+          <li><a href="checkout.html">Checkout</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="nav pull-right left-tablet">
+        <li class="dropdown hover">
+          <a data-toggle="" class="dropdown-toggle" href="#">US Doller <b class="caret"></b></a>
+          <ul class="dropdown-menu currency">
+            <li><a href="#">US Doller</a>
+            </li>
+            <li><a href="#">Euro </a>
+            </li>
+            <li><a href="#">British Pound</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown hover">
+          <a data-toggle="" class="dropdown-toggle" href="#">English <b class="caret"></b></a>
+          <ul class="dropdown-menu language">
+            <li><a href="#">English</a>
+            </li>
+            <li><a href="#">Spanish</a>
+            </li>
+            <li><a href="#">German</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown hover topcart">
+          <a  class="dropdown-toggle" href="#">
+            <i class="carticon"></i> Shopping Cart <span class="label label-success font14">1 item(s)</span> - $589.50<b class="caret"></b></a>
+          <ul class="dropdown-menu topcartopen">
+            <li>
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="image"><a href="product.html"><img title="product" alt="product" src="assets/img/prodcut-40x40.jpg" height="50" width="50"></a></td>
+                    <td class="name"><a href="product.html">MacBook</a></td>
+                    <td class="quantity">x&nbsp;1</td>
+                    <td class="total">$589.50</td>
+                    <td class="remove"><i class="icon-remove"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="image"><a href="product.html"><img title="product" alt="product" src="assets/img/prodcut-40x40.jpg" height="50" width="50"></a></td>
+                    <td class="name"><a href="product.html">MacBook</a></td>
+                    <td class="quantity">x&nbsp;1</td>
+                    <td class="total">$589.50</td>
+                    <td class="remove"><i class="icon-remove "></i></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="textright"><b>Sub-Total:</b></td>
+                    <td class="textright">$500.00</td>
+                  </tr>
+                  <tr>
+                    <td class="textright"><b>Eco Tax (-2.00):</b></td>
+                    <td class="textright">$2.00</td>
+                  </tr>
+                  <tr>
+                    <td class="textright"><b>VAT (17.5%):</b></td>
+                    <td class="textright">$87.50</td>
+                  </tr>
+                  <tr>
+                    <td class="textright"><b>Total:</b></td>
+                    <td class="textright">$589.50</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="well pull-right">
+                <a href="#" class="btn btn-success">View Cart</a>
+                <a href="#" class="btn btn-success">Checkout</a>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="header-white">
+    <div class="container">
+      <div class="row">
+        <div class="span4">
+          <%= image_tag "store/logo.png" %>
+        </div>
+        <div class="span8">
+          <div class="row">
+            <div class="pull-right logintext">Welcome Px,  you can <a href="login.html">login </a>
+              or <a href="register.html">create an account</a>
+            </div>
+          </div>
+          <%= render :partial => 'spree/shared/nav_bar' %>
+
+        </div>
+      </div>
+    </div>
+    <div  id="categorymenu">
+      <div class="container">
+        <nav class="subnav">
+          <ul class="nav-pills categorymenu">
+            <li><a class="active"  href="index.html">Home</a>
+              <div>
+                <ul class="arrow">
+                  <li><a href="home-sidebar.html">Home 2-column</a>
+                  </li>
+                  <li><a href="index.html">Home 1-column</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a   href="product.html">Products</a>
+              <div>
+                <ul class="arrow">
+                  <li><a class="bold" href="product.html">Product Full </a>
+                  </li>
+                  <li><a class="bold" href="product-sidebar.html"> Product 2 Column </a>
+                  </li>
+                  <li><a href="#"> Suits & shirts </a>
+                  </li>
+                  <li><a href="#"> Shoes <span class="label label-info">(new)</span></a>
+                  </li>
+                  <li><a href="#">Jackets & Coats <span class="label label-warning">(25)</span>
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li><a href="#">Mice and Trackballs <span class="label label-success">Sale</span>
+                    </a>
+                  </li>
+                  <li><a href="#">Laptops </a>
+                  </li>
+                </ul>
+                <ul class="arrow">
+                  <li><a href="#"> Dresses</a>
+                  </li>
+                  <li><a href="#"> Sun Glasses</a>
+                  </li>
+                  <li><a href="#"> Suits & shirts </a>
+                  </li>
+                  <li><a href="#"> Shoes </a>
+                  </li>
+                  <li><a href="#">Jackets & Coats <span class="label label-warning">(25)</span>
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li><a href="#">Mice and Trackballs <span class="label label-important">Sale</span>
+                    </a>
+                  </li>
+                  <li><a href="#">Laptops </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a  href="category-full.html">Category</a>
+              <div>
+                <ul class="arrow">
+                  <li><a class="bold" href="category.html">Category - 2 Column</a>
+                  </li>
+                  <li><a class="bold" href="category-full.html">Category-Full</a>
+                  </li>
+                  <li><a href="#"> Men Products</a>
+                  </li>
+                  <li><a href="#"> Women Products</a>
+                  </li>
+                  <li><a href="#"> Child Products</a>
+                  </li>
+                  <li><a href="#"> Home and Furniture</a>
+                  </li>
+                  <li><a href="#">Electric Accessories</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="typography.html">Features</a>
+              <div>
+                <ul class="arrow">
+                  <li><a href="typography.html">Typography</a>
+                  </li>
+                  <li><a href="form.html">Form Elements</a>
+                  </li>
+                  <li><a href="buttons.html">Buttons</a>
+                  </li>
+                  <li><a href="javascript.html">Javascripts</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="shopping-cart.html">Shopping Cart</a>
+            </li>
+            <li><a href="checkout.html">Checkout</a>
+            </li>
+            <li><a href="compare.html">Compare</a>
+            </li>
+            </li>
+            <li><a href="blog.html">Blog</a>
+              <div>
+                <ul class="arrow">
+                  <li><a href="blog.html">Blog page</a>
+                  </li>
+                  <li><a href="bloggrid.html">Blog Grid View</a>
+                  </li>
+                  <li><a href="bloglist.html">Blog List VIew</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li><a href="myaccount.html">My Account</a>
+              <div>
+                <ul>
+                  <li><a href="myaccount.html">My Account</a>
+                  </li>
+                  <li><a href="login.html">Login</a>
+                  </li>
+                  <li><a href="register.html">Register</a>
+                  </li>
+                  <li><a href="wishlist.html">Wishlist</a>
+            </li>
+                </ul>
+              </div>
+            </li>
+             <li><a href="#">Error Pages</a>
+              <div>
+                <ul>
+                  <li><a href="404.html">404 Error</a>
+                  </li>
+                  <li><a href="500.html">500 Error</a>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+            <li><a href="contact.html">Contact</a>
+            </li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>

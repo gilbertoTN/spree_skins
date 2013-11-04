@@ -1,3 +1,13 @@
 /*
- *= require store/spree_frontend
+  *= require 'store/spree_frontend'
+  *= http://fonts.googleapis.com/css?family=Droid+Serif
+  *= http://fonts.googleapis.com/css?family=Ubuntu
+  *= http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,800,700,300
+  *= require 'store/bootstrap'
+  *= require 'store/bootstrap-responsive'
+  *= require 'store/docs'
+  *= require 'store/prettify'
+  *= require 'store/style'
+  *= require 'store/flexslider'
+  *= require 'store/jquery.fancybox-1.3.4'
 */

@@ -12,6 +12,7 @@ module SpreeSkins
       def add_stylesheets
         inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_skins\n", :before => /\*\//, :verbose => true
         inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_skins\n", :before => /\*\//, :verbose => true
+        puts "Stylesheets installs"
       end
 
       def add_migrations
