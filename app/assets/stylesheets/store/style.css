@@ -580,7 +580,7 @@ min-width:90px
     span.links {margin:0px auto}
    th.image, th.model, td.image, td.model, .bannerheading1, bannerheading2, .modify {display:none!important}
    .productpriceround {margin-bottom:20px}
-   .addbanner ul li { float:none!important; display:block!important; width: auto!important; margin-left:0px!important; margin-bottom:20px;!important}
+   .addbanner ul li { float:none!important; display:block!important; width: auto!important; margin-left:0px!important; margin-bottom:20px!important}
 .productaddtocart {margin:10px}
 .productdesc .nav-tabs li a {font-size:14px}
 .nav-tabs > li > a, .nav-pills > li > a {padding:12px 6px}
