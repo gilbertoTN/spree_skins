@@ -85,7 +85,7 @@ ul.categorymenu > li ul > li img { margin:3px; }
 .navbar .nav li.topcart .dropdown-toggle .caret, .navbar .nav li.dropdown.open.topcart .caret { border-bottom-color:#999999; border-top-color:#999999 }
 .carticon { background:url(carticon.png) repeat-x 0 0; display: inline-block; height: 23px; line-height:23px; vertical-align: text-top; width:23px; }
 ul.topcartopen li > table { border-collapse: collapse; width: 100%; margin-bottom: 5px; padding:10px }
-ul.topcartopen li > table td { color: #; vertical-align: top; padding: 5px 10px; border-bottom: 1px dashed #E7E7E7; }
+ul.topcartopen li > table td { vertical-align: top; padding: 5px 10px; border-bottom: 1px dashed #E7E7E7; }
 ul.topcartopen li > table .image { width: 1px; }
 ul.topcartopen li > table .image img { text-align: left; }
 ul.topcartopen li > table .name small { color: #999999; }
