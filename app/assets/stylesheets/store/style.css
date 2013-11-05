@@ -144,9 +144,9 @@ ul.thumbnails.list .price {margin-top:5px}
 ul.categories { background: none repeat scroll 0 0 #FFFFFF;  border-radius: 4px 4px 4px 4px; padding-top:10px; padding-bottom:10px }
 ul.categories li { display:block; border-bottom:1px dashed #E7E7E7 }
 ul.categories li:last-child { border:none }
-ul.categories li a { display:block; padding:11px 5px 11px 30px; background: url("arrowcategory.png") no-repeat scroll 10px center transparent; color:#999999 }
+ul.categories li a { display:block; padding:11px 5px 11px 30px; background: url("store/arrowcategory.png") no-repeat scroll 10px center transparent; color:#999999 }
 ul.categories li a.active {color:#f25c27}
-ul.categories li a:hover { background-image: url("arrowcategory.png") no-repeat scroll 10px center transparent;  color:#333 }
+ul.categories li a:hover { background-image: url("store/arrowcategory.png") no-repeat scroll 10px center transparent;  color:#333 }
 /* Bestsellter */
 ul.bestseller { background: none repeat scroll 0 0 #FFFFFF;  border-radius: 4px 4px 4px 4px; padding-top:10px; padding-bottom:10px; margin:0px }
 ul.bestseller li a.productname { display:block;  color:#F25C27; font-size:15px }
@@ -322,11 +322,11 @@ ul.total li  span.extra {width:150px; float:left; text-align:right; padding-righ
 .myaccountbox ul  {padding:0px; margin:0px}
 .myaccountbox ul li { display:block; border-bottom:1px dashed #E7E7E7 }
 .myaccountbox ul li:last-child { border:none }
-.myaccountbox ul li a { display:block; padding:8px 5px 8px 30px; background: url("arrowcategory.png") no-repeat scroll 10px center transparent; color:#999999 }
+.myaccountbox ul li a { display:block; padding:8px 5px 8px 30px; background: url("store/arrowcategory.png") no-repeat scroll 10px center transparent; color:#999999 }
 .myaccountbox ul li a:hover {  color:#f25c27 }
 
 /* Checkout */
-.checkoutsteptitle {padding:8px 10px; background:#fff url("down.png") no-repeat right -17px; margin:5px 0 10px 0; color:#495c58; font-size:16px; border-bottom:1px dashed #E7E7E7; cursor:pointer }
+.checkoutsteptitle {padding:8px 10px; background:#fff url("store/down.png") no-repeat right -17px; margin:5px 0 10px 0; color:#495c58; font-size:16px; border-bottom:1px dashed #E7E7E7; cursor:pointer }
 .checkoutsteptitle.down {background-position: right 10px}
 .checkoutsteptitle a.modify {float:right; margin-right:30px; font-size:13px; line-height:16px}
 .checkoutstep {display:none; margin:15px 0 30px 0;  background:#fff; padding:15px; }
@@ -357,7 +357,7 @@ ul.tags {margin:20px 0px 0;}
 .tags li { display:inline-block; margin:5px 3px }
 ul.tags li a { display:inline-block; padding:3px 10px; background:#E7E7E7; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; color:#999999 }
 ul.tags li a:hover { background:#f25c27; color:#fff}
-span.viewfancypopup{ background: url("view.png") no-repeat scroll center center transparent; text-align:center; width:100%; display:none; height:75px; position:absolute; bottom:50%; margin-bottom:-38px }
+span.viewfancypopup{ background: url("store/view.png") no-repeat scroll center center transparent; text-align:center; width:100%; display:none; height:75px; position:absolute; bottom:50%; margin-bottom:-38px }
 a.fancyboxpopup { position:relative; display:block }
 a.fancyboxpopup:hover span.viewfancypopup { display:block; position:absolute; z-index:999; margin-top:-55% }
 #comments .blogtitle {font-size:14px}
@@ -384,17 +384,17 @@ label.error {    color: #f25c27;   float: none; display:inline-block}
 /* typo */
 ul.listoption1, ul.listoption2, ul.listoption3, ul.listoption4, ul.listoption5, ul.listoption6, ul.foodicon, ul.blogcaterg { margin:0px; padding:0px; list-style:none }
 ul.listoption1 li, ul.listoption2 li, ul.listoption3 li, ul.listoption4 li, ul.listoption5 li, ul.listoption6 li{ display:block; padding:5px 0 5px 20px }
-ul.listoption1 li { background: url("list1.png") no-repeat scroll 0 5px; padding:5px 0 5px 25px }
-ul.listoption2 li { background: url("list2.png") no-repeat scroll 0 5px; }
-ul.listoption3 li { background: url("list3.png") no-repeat scroll 0 9px; padding:5px 0 5px 15px }
-ul.listoption4 li { background: url("list4.png") no-repeat scroll 0 10px; }
-ul.listoption5 li { background: url("list5.png") no-repeat scroll 0 10px; padding:5px 0 5px 15px }
-ul.listoption6 li { background: url("list6.png") no-repeat scroll 0 10px; }
+ul.listoption1 li { background: url("store/list1.png") no-repeat scroll 0 5px; padding:5px 0 5px 25px }
+ul.listoption2 li { background: url("store/list2.png") no-repeat scroll 0 5px; }
+ul.listoption3 li { background: url("store/list3.png") no-repeat scroll 0 9px; padding:5px 0 5px 15px }
+ul.listoption4 li { background: url("store/list4.png") no-repeat scroll 0 10px; }
+ul.listoption5 li { background: url("store/list5.png") no-repeat scroll 0 10px; padding:5px 0 5px 15px }
+ul.listoption6 li { background: url("store/list6.png") no-repeat scroll 0 10px; }
 
 /* messages */
 
 .errormsg, .alertmsg, .successmsg, .infomsg, .infomsg2 {
-    background: url("messages.png") no-repeat scroll 8px 0 transparent;
+    background: url("store/messages.png") no-repeat scroll 8px 0 transparent;
     display: block;
     margin: 18px 0;
     padding: 15px 8px 15px 50px;
@@ -427,7 +427,7 @@ ul.listoption6 li { background: url("list6.png") no-repeat scroll 0 10px; }
     border: 1px solid #AFD3F2;
 }
 a.clostalert {
-    background: url("messages.png") no-repeat scroll 0 -310px transparent;
+    background: url("store/messages.png") no-repeat scroll 0 -310px transparent;
     cursor: pointer;
     height: 15px;
     overflow: hidden;
@@ -1185,7 +1185,7 @@ select, input[type="file"] {
 }
 .sidewidt .nav.categories > li > a:hover {
   text-decoration: none;
-  background: url("arrowcategory.png") no-repeat scroll 10px center transparent!important;
+  background: url("store/arrowcategory.png") no-repeat scroll 10px center transparent!important;
 }
 .breadcrumb {background:none}
 .breadcrumb .active {color:#F25C27}
