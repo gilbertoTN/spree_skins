@@ -3,13 +3,13 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_skins'
   s.version     = '2.1.2'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.summary     = 'Shop Simple Theme'
+  s.description = 'Shop Simple Theme to apply to out of the box Spree so it looks a bit nicer.'
   s.required_ruby_version = '>= 1.9.3'
 
-  # s.author    = 'You'
-  # s.email     = 'you@example.com'
-  # s.homepage  = 'http://www.spreecommerce.com'
+  # s.author    = 'Gilberto Tovar'
+  # s.email     = 'gtovar@incaztech.com'
+  # s.homepage  = 'http://www.atmossfera.com'
 
   #s.files       = `git ls-files`.split("\n")
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
