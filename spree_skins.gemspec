@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.description = 'Shop Simple Theme to apply to out of the box Spree so it looks a bit nicer.'
   s.required_ruby_version = '>= 1.9.3'
 
-  # s.author    = 'Gilberto Tovar'
-  # s.email     = 'gtovar@incaztech.com'
-  # s.homepage  = 'http://www.atmossfera.com'
+   s.author    = 'Gilberto Tovar'
+   s.email     = 'gtovar@incaztech.com'
+   s.homepage  = 'http://www.atmossfera.com'
 
   #s.files       = `git ls-files`.split("\n")
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
