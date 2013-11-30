@@ -2,14 +2,14 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_skins'
-  s.version     = '2.1.2'
+  s.version     = '2.1'
   s.summary     = 'Shop Simple Theme'
   s.description = 'Shop Simple Theme to apply to out of the box Spree so it looks a bit nicer.'
   s.required_ruby_version = '>= 1.9.3'
 
    s.author    = 'Gilberto Tovar'
    s.email     = 'gtovar@incaztech.com'
-   s.homepage  = 'http://www.atmossfera.com'
+   s.homepage  = 'private repo'
 
   #s.files       = `git ls-files`.split("\n")
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
@@ -20,9 +20,9 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 2.1.2'
-  s.add_dependency 'spree_frontend', '~> 2.1.2'
-  s.add_dependency 'spree_backend', '~> 2.1.2'
+  s.add_dependency 'spree_core', '~> 2.1'
+  s.add_dependency 'spree_frontend', '~> 2.1'
+  s.add_dependency 'spree_backend', '~> 2.1'
  
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'coffee-rails'

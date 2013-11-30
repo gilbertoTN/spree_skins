@@ -1,9 +1,22 @@
-<% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots %>
-<%= form_tag spree.products_path, :class => "form-search marginnull topsearch pull-right", :method => :get do %>
-  <% select_tag :taxon,
-    options_for_select([[Spree.t(:all_departments), '']] +
-                       @taxons.map {|t| [t.name, t.id]},
-                       @taxon ? @taxon.id : params[:taxon]), 'aria-label' => 'Taxon' %>
-                     <%= search_field_tag :keywords, params[:keywords], :placeholder => Spree.t(:search), :class => "input-large search-query search-icon-top" %>
-                     <% submit_tag Spree.t(:search), :name => nil %>
-                   <% end %>
+<div class="row">
+  <div class="span4">
+<%= link_to image_tag("store/logo.png"), root_path, :class => "logo" %>
+
+  </div>
+  <div class="span8">
+    <div class="row">
+      <div class="pull-right logintext">Welcome Px,  you can <a href="login.html">login </a>
+        or <a href="register.html">create an account</a>
+      </div>
+    </div>
+    <% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots %>
+    <%= form_tag spree.products_path, :class => "form-search marginnull topsearch pull-right", :method => :get do %>
+      <% select_tag :taxon,
+        options_for_select([[Spree.t(:all_departments), '']] +
+                           @taxons.map {|t| [t.name, t.id]},
+                           @taxon ? @taxon.id : params[:taxon]), 'aria-label' => 'Taxon' %>
+                         <%= search_field_tag :keywords, params[:keywords], :placeholder => Spree.t(:search), :class => "input-large search-query search-icon-top" %>
+                         <% submit_tag Spree.t(:search), :name => nil %>
+                       <% end %>
+                     </div>
+                   </div>
