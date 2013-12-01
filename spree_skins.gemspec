@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
    s.author    = 'Gilberto Tovar'
    s.email     = 'gtovar@incaztech.com'
-   s.homepage  = 'private repo'
+   s.homepage  = 'https://www.atmossfera.com'
 
   #s.files       = `git ls-files`.split("\n")
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
