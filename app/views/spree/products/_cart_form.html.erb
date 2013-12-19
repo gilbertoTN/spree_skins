@@ -1,0 +1,38 @@
+<%= form_for :order, :url => populate_orders_path do |f| %> 
+  <% if @product.price_in(current_currency) and !@product.price.nil? %>
+    <div class="productprice">
+      <div class="proldprice"><%= display_price(@product) %></div>
+      <div class="prnewprice"><%= display_price(@product) %></div>
+    </div>
+
+    <% if @product.variants_and_option_values(current_currency).any? %>
+      <div class="quantitybox">
+        <select class="selectsize">
+          <option><%= Spree.t("Select Size") %></option>
+          <% @product.variants_and_option_values(current_currency).each_with_index do |variant, index| %>
+            <option>
+            <%= variant_options variant %>
+          <% end %>
+          </option>
+        <% end %>
+
+
+        <%= number_field_tag (@product.variants_and_option_values.any? ? :quantity : "variants[#{@product.master.id}]"),
+          1, :class => 'selectqty', :min => 1 %>
+        <%= button_tag :class => 'btn btn-success pull-left', :id => 'add-to-cart-button', :type => :submit do %>
+          <%= Spree.t(:add_to_cart) %>
+        <% end %>
+
+        <div class="links  productlinks">
+          <a class="wishlist" href="wishlist.html">wishlist</a>
+          <a class="compare" href="compare.html">compare</a>
+        </div>
+      </div>
+
+    <% else %>
+      <div class="productprice">
+        <%= Spree.t('product_not_available_in_this_currency') %>
+      </div>
+    <% end %>
+
+  <% end %>

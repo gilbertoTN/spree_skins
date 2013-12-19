@@ -1,0 +1,28 @@
+<div class="span7" data-hook="product_right_part" >
+  <div class="row" data-hook="product_right_part_wrap">
+    <div class="span7" data-hook="product_description">
+      <h1 class="productname" itemprop="name"><span class="bgnone" ><%= accurate_title %></span></h1>
+      <%= render :partial => 'cart_form' %>
+
+      <ul class="nav nav-tabs" id="myTab">
+          <li class="active"><a href="#description">Description</a>
+          </li>
+          <li><a href="#specification">Specification</a>
+          </li>
+          <li><a href="#review">Review</a>
+          </li>
+          <li><a href="#producttag">Product Tags</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="description">
+            <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
+          </div
+          <%= render :partial => 'specification.html.erb' %>
+          <%= render :partial => 'review.html.erb' %>
+          <%= render :partial => 'producttag.html.erb' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

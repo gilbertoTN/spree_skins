@@ -1,0 +1,44 @@
+<div class="span5">
+  <% if defined?(image) && image %>
+    <ul class="thumbnails mainimage">
+      <li class="span5">
+      <%= link_to(image_tag(image.attachment.url(:product)),image.attachment.url(:large),:rel => "position: 'inside' , showTitle: false, adjustX:-4, adjustY:-4", :class => "thumbnail cloud-zoom") %>
+      </li>
+    </ul>
+  <% else %>
+    <ul class="thumbnails mainimage">
+      <% @product.images.each do |i| %>
+        <li class='span5'>
+          <%= link_to(image_tag(i.attachment.url(:product)),i.attachment.url(:large),:rel=>"position: 'inside' , showTitle: false, adjustX:-4, adjustY:-4", :class=>"thumbnail cloud-zoom") %>
+        </li>
+      <% end %>
+    <% if @product.has_variants? %>
+      <% @product.variant_images.each do |i| %>
+        <% next if @product.images.include?(i) %>
+        <li class='span5'>
+          <%= link_to(image_tag(i.attachment.url(:product)),i.attachment.url(:large),:rel=>"position: 'inside' , showTitle: false, adjustX:-4, adjustY:-4", :class=>"thumbnail cloud-zoom") %>
+        </li>
+      <% end %>
+    <% end %>
+    </ul>
+  <% end %>
+<span>Mouse move on Image to zoom</span>
+<%# no need for thumbnails unless there is more than one image %>
+<% if (@product.images + @product.variant_images).uniq.size > 1 %>
+  <ul class="thumbnails mainimage">
+    <% @product.images.each do |i| %>
+      <li class='producthtumb'>
+      <%= link_to(image_tag(i.attachment.url(:large)),"#", :class => "thumbnail") %>
+      </li>
+    <% end %>
+    <% if @product.has_variants? %>
+      <% @product.variant_images.each do |i| %>
+        <% next if @product.images.include?(i) %>
+        <li class='producthtumb'>
+        <%= link_to(image_tag(i.attachment.url(:large)),"#", :class => "thumbnail") %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+<% end %>
+</div>
