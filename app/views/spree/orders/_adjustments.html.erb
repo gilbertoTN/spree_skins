@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="pull-right">
+    <div class="span5 pull-right">
+      <tbody>
+        <tr>
+          <td><span class="extra bold"><%= Spree.t(:subtotal) %>:</span></td>
+          <td><span class="bold"><%= @order.display_total.to_html %> </span></td>
+        </tr>
+        <% unless @order.adjustments.eligible.blank? %>
+        <% @order.adjustments.eligible.each do |adjustment| %>
+          <tr>
+            <td><span class="extra bold"><%= adjustment.label %></span></td>
+            <td><span class="bold"><%= adjustment.display_amount.to_html %></span></td>
+          </tr>
+        <% end %>
+      <% end %>
+      </table>
+      <br/>
+      <%= order_form.text_field :coupon_code, :size => 10, :placeholder => Spree.t(:coupon_code) %>
+      <%= button_tag :class => 'btn btn-success pull-right', :id => 'update-button' do %>
+        <%= Spree.t(:update) %>
+      <% end %>
+      <%= button_tag :class => 'btn btn-success pull-right mr10', :id => 'checkout-link', :name => 'checkout' do %>
+        <%= Spree.t(:checkout) %>
+      <% end %>
+    </div>
+  </div>
+</div>
