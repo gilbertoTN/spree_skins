@@ -1,12 +1,17 @@
 <nav class="nav-collapse collapse" style="height:0px">
-<ul class="nav">
-  <li class="active"><a href="index.html">Home</a>
-  </li>
-  <li><a href="myaccount.html">My Account </a>
-  </li>
-  <li><a href="shopping-cart.html">Shopping Cart</a>
-  </li>
-  <li><a href="checkout.html">Checkout</a>
-  </li>
-</ul>
+  <ul class="nav">
+    <li class="active">
+      <%= link_to Spree.t(:home), spree.root_path %>
+      </li>
+
+    <li>
+    <%= link_to Spree.t(:my_account), spree.account_path if spree_current_user %>
+    </li>
+    <li>
+      <%= link_to Spree.t(:shopping_cart), spree.cart_path %>
+    </li>
+    <li>
+    <%= link_to Spree.t(:checkout), spree.checkout_path %>
+    </li>
+  </ul>
 </nav>
