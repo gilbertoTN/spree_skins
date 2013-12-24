@@ -1,0 +1,99 @@
+ <section id="login">
+ <div class="container">
+      <ul class="breadcrumb">
+        <li>
+          <a href="#">Home</a>
+          <span class="divider">/</span>
+        </li>
+        <li class="active">Login</li>
+      </ul>
+      <div class="row">
+        
+        <!-- Account Login-->
+        <div class="span9">
+          <h1 class="headingmain"><span>Account Login</span></h1>
+          <section class="newcustomer">
+            <h2 class="heading2">New Customer </h2>
+            <div class="loginbox">
+              <h4 class="heading4"> Register Account</h4>
+              <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
+              <br>
+              <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
+              <br>
+              <br>
+              <%= link_to Spree.t(:create_a_new_account), spree.signup_path, :class => "btn btn-success" %>
+            </div>
+          </section>
+          <section class="returncustomer">
+            <h2 class="heading2">Returning Customer </h2>
+            <div class="loginbox">
+              <h4 class="heading4">I am a returning customer</h4>
+
+              <%= form_for Spree::User.new, :as => :spree_user, :url => spree.create_new_session_path, :class => "form-vertical" do |f| %>
+                <fieldset>
+                  <div class="control-group">
+                    <%= f.label :email, Spree.t(:email), :class => "control-label" %>
+                    <div class="controls">
+                      <%= f.email_field :email, :class => 'span3', :tabindex => 1 %>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <%= f.label :password, Spree.t(:password), :class => "control-label" %>
+                    <div class="controls">
+                      <%= f.password_field 'password', :class => 'span3', :tabindex => 2 %>
+                    </div>
+                  </div>
+                  <%= link_to Spree.t(:forgot_password), spree.recover_password_path %>
+                  <br>
+                  <%= f.check_box :remember_me, :style => "float:left;margin-right:5px;" %>
+                    <%= f.label :remember_me, Spree.t(:remember_me) %>
+                  <br>
+                  <br>
+                  <%= button_tag Spree.t(:login), :class => 'btn btn-success', :tabindex => 3 %>
+                </fieldset>
+              <% end %>
+
+
+            </div>
+          </section>
+        </div>
+        
+        <!-- Sidebar Start-->
+        <div class="span3">
+          <aside>
+            <div class="sidewidt">
+              <h1 class="heading1"><span>Account</span></h1>
+              <ul class="nav nav-list categories">
+                <li>
+                  <a href="#">Login / Register</a>
+                </li>
+                <li>
+                  <a href="#">Forgotten Password</a>
+                </li>
+                <li>
+                  <a href="#">My Account</a>
+                </li>
+                <li>
+                  <a href="#">Wish List</a>
+                </li>
+                <li><a href="#">Order History</a>
+                </li>
+                <li><a href="#">Downloads</a>
+                </li>
+                <li><a href="#">Returns</a>
+                </li>
+                <li>
+                  <a href="#"> Transactions</a>
+                </li>
+                <li>
+                  <a href="category.html">Newsletter</a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+        <!-- Sidebar End-->
+      </div>
+    </div>
+  </section>
+
