@@ -1,12 +1,17 @@
 <div class="row">
   <div class="span4">
-<%= link_to image_tag("store/logo.png"), root_path, :class => "logo" %>
+    <%= link_to image_tag("store/#{"atmossfera_" if Rails.env.production?}logo.png"), root_path, :class => "logo" %>
 
   </div>
   <div class="span8">
     <div class="row">
-      <div class="pull-right logintext">Welcome Px,  you can <a href="login.html">login </a>
-        or <a href="register.html">create an account</a>
+      <div class="pull-right logintext">
+ <%= Spree.t(:welcome_to_atmossfera)%>, 
+        <% if spree_current_user %>
+  <%= link_to Spree.t(:logout), spree.destroy_spree_user_session_path %>
+<% else %>
+ <%= link_to Spree.t(:login), spree.login_path %> or <%= link_to Spree.t(:create_a_new_account), spree.signup_path %>
+<% end %>
       </div>
     </div>
     <% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots %>
