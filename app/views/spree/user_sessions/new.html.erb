@@ -1,0 +1,15 @@
+<% if flash[:alert] %>
+  <div class="errormsg alert">
+    <a class="clostalert">close</a>
+    <strong>Error!</strong> <%= flash[:alert] %>
+  </div>
+
+<% end %>
+
+<% @body_id = 'login' %>
+<div id="existing-customer">
+  <div data-hook="login">
+    <%= render :partial => 'spree/shared/login' %>
+  </div>
+</div>
+<div data-hook="login_extras"></div>
