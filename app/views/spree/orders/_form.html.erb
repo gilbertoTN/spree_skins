@@ -1,8 +1,8 @@
 <table class="table table-striped table-bordered">
   <tr>
     <th class="image" colspan="2" ><%= Spree.t(:item) %></th>
-    <th class="quantity"><%= Spree.t(:qty) %></th>
     <th class="price"><%= Spree.t(:price) %></th>
+    <th class="quantity"><%= Spree.t(:qty) %></th>
     <th class="total"><%= Spree.t(:total) %></th>
   </tr>
       <%= render partial: 'line_item', collection: order_form.object.line_items, locals: {order_form: order_form} %>

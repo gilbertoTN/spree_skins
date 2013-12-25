@@ -11,11 +11,11 @@
     </li>
     <li class="active">CheckOut</li>
   </ul>
-  <h1 class="headingmain"><span><%= Spree.t(:shopping_cart) %></span></h1>
+  <h1 class="headingmain"><span><%=" #{Spree.t(:shopping_cart)} (#{current_order.item_count})" %> </span></h1>
   <% if @order.line_items.empty? %>
     <div data-hook="empty_cart">
       <p><%= Spree.t(:your_cart_is_empty) %></p>
-      <p><%= link_to Spree.t(:continue_shopping), products_path, :class => 'button continue' %></p>
+      <p><%= link_to Spree.t(:continue_shopping), products_path, :class => 'btn btn-success' %></p>
     </div>
   <% else %>
     <%= form_for @order, :url => update_cart_path, :html => {:id => 'update-cart'} do |order_form| %>
@@ -25,6 +25,7 @@
       <%= render :partial => "spree/orders/adjustments", :locals => { :order_form => order_form } %>
     <% end %>   
   <% end %> <!-- end form -->
+  <% unless @order.line_items.empty? %>
   <div class="row">
     <div class="pull-left">
       <div class="span5 pull-left">
@@ -36,6 +37,7 @@
       </div>
     </div>
   </div>
+<% end %>
 </div>
 </section>
 
