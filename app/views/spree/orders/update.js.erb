@@ -1,0 +1,2 @@
+$("#ajax_cart").html('<%= escape_javascript "<i class='carticon'></i>#{Spree.t('shopping_cart')}: <span class='label label-success font14'>#{current_order.item_count} #{Spree.t(:item)} </span>- #{current_order.display_total.to_html}<b class='caret'></b>".html_safe %>')
+  $(".cart-info tr").first().remove();

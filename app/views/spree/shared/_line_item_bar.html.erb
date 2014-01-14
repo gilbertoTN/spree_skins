@@ -1,0 +1,64 @@
+<%= form_for current_order, :url => spree.update_cart_path, :html => {:id => 'update-cart'} do |order_form| %>
+  <table>
+    <tbody>
+      <%= order_form.fields_for :line_items do |item_form| -%>
+        <% variant = item_form.object.variant if item_form.object.variant %>
+        <% line_item = item_form.object if item_form.object.variant %>
+        <tr class="<%= cycle('', 'alt') %> line-item" >
+
+          <td class="image" data-hook="cart_item_image"  >
+            <% if variant.images.length == 0 %>
+              <%= link_to mini_image(variant.product), variant.product %>
+            <% else %>
+              <%= link_to image_tag(variant.images.first.attachment.url(:mini)), variant.product %>
+            <% end %>
+          </td>
+
+          <td class="name" data-hook="cart_item_description">
+            <%= link_to line_item.name, product_path(variant.product) %>
+          </td>
+
+          <td class="quantity" data-hook="cart_item_quantity">
+            <%= line_item.quantity %>
+            <%= item_form.hidden_field :quantity, :min => 0, :class => "line_item_quantity", :size => 5, :style => "width: 50px;" %>
+          </td>
+
+          <td class="total" data-hook="cart_item_total">
+            <%= line_item.display_amount.to_html unless line_item.quantity.nil? %>
+          </td>
+
+          <td class="remove" >
+            <%= link_to image_tag('store/remove.png'), '#', :class => 'delete', :id => "delete_#{dom_id(line_item)}" %>
+          </td>
+
+        </tr>
+      <% end -%>
+    </tbody> 
+  </table>
+
+  <div class="pull-right">
+  <table>
+    <tbody>
+      <tr >
+        <td class="textright"><b><%= Spree.t(:subtotal) %></b></td>
+        <td class="textright"><%= order_form.object.display_total %></td>
+      </tr>
+      <% unless order_form.object.adjustments.eligible.blank? %>
+        <% order_form.object.adjustments.eligible.each do |adjustment| %>
+          <tr>
+            <td class="textright"><b><%= adjustment.label %></b></td>
+            <td class="textright"><%= adjustment.display_amount.to_html %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+      <%= link_to Spree.t(:view_cart), spree.cart_path, :class => "btn btn-success"%>
+      <%= button_tag :class => 'btn btn-success', :id => 'checkout-link', :name => 'checkout' do %>
+      <%= Spree.t(:checkout) %>
+    <% end %>
+</div>
+
+
+
+<% end %>   
