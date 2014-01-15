@@ -10,7 +10,15 @@ paginated_products ||= products
     <% end %>
 
     <% if products.empty? %>
-      <%= Spree.t(:no_products_found) %>
+
+      <section id="latest">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <%= Spree.t(:no_products_found) %>
+          </div>
+          </div>
+          </div>
     <% elsif params.key?(:keywords) %>
       <h6 class="search-results-title"><%= Spree.t(:search_results, :keywords => h(params[:keywords])) %></h6>
     <% end %>

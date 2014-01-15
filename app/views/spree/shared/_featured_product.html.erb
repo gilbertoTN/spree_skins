@@ -10,40 +10,45 @@
     <% end %>
 
     <% if products.empty? %>
+      <section id="featured">
+      <div class="container">
       <%= Spree.t(:no_products_found) %>
+    </div>
+    </div>
     <% elsif params.key?(:keywords) %>
       <h6 class="search-results-title"><%= Spree.t(:search_results, :keywords => h(params[:keywords])) %></h6>
     <% end %>
 
-
-<!-- Featured Product-->
-  <section id="featured">
-    <div class="container">
-      <h1 class="headingfull"><span>Featured Products</span></h1>
-      <ul class="thumbnails" data-hook>
-        <% products.each do |product| %>
-          <li class="span3" id="product_<%= product.id %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
-          <%= link_to truncate(product.name, :length => 50), product, :class => 'prdocutname', :itemprop => "name", :title => product.name %>
-          <div class="thumbnail">
-            <span class="sale tooltip-test" >Sale</span>
-            <%= link_to large_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
-            <div class="caption">
-              <div class="price pull-left">
-                <span class="oldprice"><%= display_price(product) %></span>
-                <span class="newprice"> <%= display_price(product) %></span>
+    <% if products.empty? %>
+      <!-- Featured Product-->
+      <section id="featured">
+      <div class="container">
+        <h1 class="headingfull"><span>Featured Products</span></h1>
+        <ul class="thumbnails" data-hook>
+          <% products.each do |product| %>
+            <li class="span3" id="product_<%= product.id %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+            <%= link_to truncate(product.name, :length => 50), product, :class => 'prdocutname', :itemprop => "name", :title => product.name %>
+            <div class="thumbnail">
+              <span class="sale tooltip-test" >Sale</span>
+              <%= link_to large_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
+              <div class="caption">
+                <div class="price pull-left">
+                  <span class="oldprice"><%= display_price(product) %></span>
+                  <span class="newprice"> <%= display_price(product) %></span>
+                </div>
+                <a class="cartadd pull-right tooltip-test" title="Add to Cart"><%= Spree.t("Add to Cart") %> </a>
+                <span class="links pull-left"><a class="info" href="product.html">info</a>
+                  <a class="wishlist" href="wishlist.html">wishlist</a>
+                  <a class="compare" href="compare.html">compare</a>
+                </span>
               </div>
-              <a class="cartadd pull-right tooltip-test" title="Add to Cart"><%= Spree.t("Add to Cart") %> </a>
-              <span class="links pull-left"><a class="info" href="product.html">info</a>
-              <a class="wishlist" href="wishlist.html">wishlist</a>
-              <a class="compare" href="compare.html">compare</a>
-              </span>
             </div>
-          </div>
-          </li>
-        <%end%>
-      </ul>
-    </div>
-  </section>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      </section>
+    <% end %>
 
     <% if paginated_products.respond_to?(:num_pages) %>
       <%= paginate paginated_products %>
