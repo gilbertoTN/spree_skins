@@ -1,8 +1,10 @@
 <li class="dropdown hover topcart" >
 <%= link_to_cart_own_style %>
-<ul class="dropdown-menu topcartopen">
-  <li style="width: 420px;" >
-  <%= render partial: 'spree/shared/line_item_bar' %>
-  </li>
-</ul>
+<% if current_order %>
+  <ul class="dropdown-menu topcartopen">
+    <li style="width: 420px;" >
+    <%= render partial: 'spree/shared/line_item_bar' %>
+    </li>
+  </ul>
+<% end %>
 </li>
